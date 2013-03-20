@@ -102,6 +102,7 @@ and the name of the container.
 
 ## Roadmap
 
-* Tests
+* Unit tests
+* Exception handling
 * Add to Packagist
 * Create wrapper package for use in Laravel 4
