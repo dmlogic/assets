@@ -79,20 +79,26 @@ and
 
     Assets::container('home')->add($myAssets);
 
-### Generate collections from text arrays
+### Render assets from named Container
 
-One of the most likely uses of this package is to define your collections in
+    echo Assets::container('home')->styles();
+
+    echo Assets::container('home')->scripts();
+
+### Generate Containers from text arrays
+
+One of the most likely uses of this package is to define your containers in
 config files that vary per environment. A method `createContainer()` is
 available to make this a simple process. It accepts two parameters, a config
 array in the format
 [described here](https://github.com/dmlogic/assets/blob/master/samples/config.php)
-and the name of the container
+and the name of the container.
 
-    $collections = include '/config/packages/[your_environment]/assets.php';
+    $containers = include '/config/packages/[your_environment]/assets.php';
 
-    $defaultAssets = Assets::createContainer( $collections['default'] );
+    $defaultAssets = Assets::createContainer( $containers['default'] );
 
-    $homeAssets = Assets::createContainer( $collections['home'], 'home' );
+    $homeAssets = Assets::createContainer( $containers['home'], 'home' );
 
 ## Roadmap
 
