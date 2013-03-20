@@ -1,9 +1,9 @@
 <?php
 /**
- * Here we define every available script and style, then group them into collections
+ * Here we define every available script and style, then group them into containers
  *
  * The idea is that this data would be stored in an environment config file
- * allowing for collections of the same name to vary in contents across
+ * allowing for containers of the same name to vary in contents across
  * environments.
  *
  * This in turn allows for a dev site to have indivdual asset files
@@ -19,6 +19,7 @@
 $allAssets = array(
 
     'jquery_js'      =>  array(
+
                              'type'       => 'script',
                              'attributes' =>  array(
                                                     'path' => '//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'
@@ -56,7 +57,7 @@ $allAssets = array(
     'bootstrap_css'  =>  array(
                             'type'       => 'style',
                             'attributes' =>  array(
-                                                'path'  => '//twitter.github.com/bootstrap/assets/css/bootstrap.css',
+                                                'path'  => '/assets/bootstrap/css/bootstrap.css',
                                                 'media' => 'screen'
                                                   )
                           ),
@@ -70,7 +71,7 @@ $allAssets = array(
                           ),
 );
 
-// return our collection names and the list of assets they use
+// return our container names and the list of assets they use
 return array(
 
     'default' => array(

@@ -62,7 +62,8 @@ class StaticAsset {
      * @param array  $arr       key/value pairs of attributes
      * @param boolean $checkKey whether to validate and process the 'path' key
      */
-    protected function setAttributes($arr,$checkKey = true) {
+    protected function setAttributes($arr,$checkKey = true)
+    {
 
         if($checkKey) {
 

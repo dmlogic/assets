@@ -1,9 +1,9 @@
 <?php
 // includes and namespace. You'd normally autoload this via Composer
-include '../src/Assets.php';
-include '../src/StaticAsset.php';
-include '../src/Script.php';
-include '../src/Style.php';
+include '../Assets.php';
+include '../StaticAsset.php';
+include '../Script.php';
+include '../Style.php';
 
 use Dmlogic\Assets\Assets as Assets;
 
@@ -12,12 +12,12 @@ $collections = include 'config.php';
 
 /**
  * Here we create our collections by picking assets from those available
- * Output order is order added
+ * Output order is the order added
  */
-$defaultAssets = Assets::createCollection( $collections['default'] );
+$defaultAssets = Assets::createContainer( $collections['default'] );
 
 // or do this
-// $homeAssets = Assets::createCollection( $collections['home'], 'home' );
+// $homeAssets = Assets::createContainer( $collections['home'], 'home' );
 
 ?>
 <html>

@@ -27,7 +27,7 @@ class Script extends StaticAsset {
     public function __construct($attributes)
     {
         // if we're inline, we don't want to validate the path attribute
-        $checkKey = (isset($attributes['display']) && $attributes['display'] == 'inline') ? false : true;
+        $checkKey = (isset($attributes['inline'])) ? false : true;
 
         $this->setAttributes($attributes,$checkKey);
     }
@@ -43,10 +43,10 @@ class Script extends StaticAsset {
     {
 
         // handle inline differently
-        if(isset($this->attributes['display']) && $this->attributes['display'] == 'inline') {
+        if(isset($this->attributes['inline'])) {
 
             // we'll need some content if we're inline
-            if(empty($this->attributes['content'])) {
+            if(empty($this->attributes['inline'])) {
 
                 throw new \Exception('No inline javascript content supplied');
             }
@@ -73,7 +73,7 @@ class Script extends StaticAsset {
             $out .= ' type="'.$this->attributes['type'].'"';
         }
 
-        $out .= ">\n".$this->attributes['content']."\n</script>\n";
+        $out .= ">\n".$this->attributes['inline']."\n</script>\n";
 
         return $out;
     }

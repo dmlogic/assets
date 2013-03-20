@@ -1,9 +1,9 @@
 <?php
 // includes and namespace. You'd normally autoload this via Composer
-include '../src/Assets.php';
-include '../src/StaticAsset.php';
-include '../src/Script.php';
-include '../src/Style.php';
+include '../Assets.php';
+include '../StaticAsset.php';
+include '../Script.php';
+include '../Style.php';
 
 use Dmlogic\Assets\Assets as Assets;
 
@@ -65,8 +65,7 @@ Assets::container('footer')->add($available['bootstrap_js']);
     <?php
     // Add a new Asset to the footer collection after it's initial creation
     Assets::container('footer')->add(new Dmlogic\Assets\Script([
-                                            'display'  => 'inline',
-                                            'content' => 'console.log("An inline script");'
+                                            'inline' => 'console.log("An inline script");'
                                           ]));
     ?>
 

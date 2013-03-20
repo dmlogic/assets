@@ -47,7 +47,7 @@ class Assets {
      * @param  array  $config   see sample file provided
      * @return Asset_Container
      */
-    public static function createCollection($config = array(), $name = 'default')
+    public static function createContainer($config = array(), $name = 'default')
     {
         $container = self::container($name);
 
