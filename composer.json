@@ -1,9 +1,9 @@
 {
     "name": "dmlogic/assets",
     "type": "library",
-    "description": "Static asset collection manager",
+    "description": "Static asset manager",
     "keywords": ["asset", "static", "css","js"],
-    "homepage": "https://github.com/dmlogic/Assets",
+    "homepage": "https://github.com/dmlogic/assets",
     "license": "MIT",
     "authors": [
         {
