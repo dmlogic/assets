@@ -71,7 +71,7 @@ class AssetsTest extends PHPUnit_Framework_TestCase
     {
         // as above
 
-        $container = $this->newSampleContainer('testOutputScripts');
+        $container = $this->newSampleContainer('testOutputStyles');
 
         $this->assertTag(['tag' => 'link'],$container->styles());
     }
