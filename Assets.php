@@ -49,6 +49,10 @@ class Assets {
      */
     public static function createContainer($config = array(), $name = 'default')
     {
+        if(isset(static::$containers[$name])) {
+             throw new \Exception("Container of name '$name' already exists");
+        }
+
         $container = self::container($name);
 
         foreach($config as $asset) {

@@ -131,6 +131,14 @@ alert("inline");
 ';
 
         $this->assertEquals($output,$expected);
+
+        // finally, prevent a duplicate name
+        try {
+            Assets::createContainer( $config, 'testCreateContainerFunction' );
+        } catch (Exception $e) {
+            echo $e;
+        }
+
     }
 
     //--------------------------------------------------------------------------
