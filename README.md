@@ -22,6 +22,37 @@ Install via Composer (dmlogic/assets) or
 
     use Dmlogic\Assets\Assets as Assets;
 
+### Installing to Laravel 4
+
+Add the following to the 'require' section of your composer.json file.
+
+    "dmlogic/assets": "*"
+
+Now run `composer update`.
+
+You can then use the package immediately via the namespace e.g.
+
+    $myContainer = Dmlogic\Assets\Assets::container();
+
+However, for easier usage, complete the following steps.
+
+#### Add an Alias
+
+Open the file app/config/app.php and add a line to the 'aliases' array:
+
+    'Assets' => 'Dmlogic\Assets\Assets'
+
+You can now access the main class using
+
+    $myContainer = Assets::container();
+
+#### Utilise cascading config files
+
+Create an assets.php file in your app/config folder and add an array as described
+in the 'Generate Containers from text arrays' section below.
+
+Then duplicate and adjust this file for your different environment folders.
+
 ## Usage
 
 The interface is a simplified form of the Laravel 3 Asset class. Create one or
