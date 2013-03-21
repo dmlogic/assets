@@ -6,19 +6,19 @@ ANOTHER static Asset manager package for PHP 5.3+
 This one is designed to support the following workflow:
 
 * Assets are defined as Containers of one or more stylesheets or scripts
-* Collection contents can vary between environments
+* Container contents can vary between environments
 * Your app controllers or endpoints can render Containers ready for views via a very simple interface
-* The package does NOT currently compile or combine assets - you would do that using your build/deploy process and reflect the differing Containers contents in your environments
+* The package does NOT currently compile or combine assets - you would do that using your build/deploy process and reflect the differing Container contents in your environments
 * Very extensible. More StaticAssets could be added such as SASS, LESS or Coffeescript. Or maybe even an Image class that outputs the [Picture element](http://picture.responsiveimages.org/#example-of-usage). See comments in the Classes for more info
 
 ## Installation
 
 Install via Composer (dmlogic/assets) or
 
-    include '../src/Assets.php';
-    include '../src/StaticAsset.php';
-    include '../src/Script.php';
-    include '../src/Style.php';
+    include 'Assets/Assets.php';
+    include 'Assets/StaticAsset.php';
+    include 'Assets/Script.php';
+    include 'Assets/Style.php';
 
     use Dmlogic\Assets\Assets as Assets;
 
@@ -102,7 +102,7 @@ and the name of the container.
 
 ## Roadmap
 
-* Unit tests
-* Exception handling
-* Add to Packagist
-* Create wrapper package for use in Laravel 4
+* Decent Exception handling
+* Picture Element Asset type perhaps?
+* Sizable image Asset type perhaps?
+* SVG with PNG fallback for old IE perhaps?

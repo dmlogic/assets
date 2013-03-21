@@ -56,6 +56,18 @@ class StaticAsset {
     //--------------------------------------------------------------------------
 
     /**
+     * Pass attributes directly to setter
+     *
+     * @param array $attributes
+     */
+    public function __construct($attributes)
+    {
+        $this->setAttributes($attributes);
+    }
+
+    //--------------------------------------------------------------------------
+
+    /**
      * Merges the attributes supplied with those provided to the constructor
      * Also optionally validates process and validates 'path' key
      *
