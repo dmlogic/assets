@@ -136,7 +136,6 @@ alert("inline");
         try {
             Assets::createContainer( $config, 'testCreateContainerFunction' );
         } catch (Exception $e) {
-            echo $e;
         }
 
     }
